@@ -22,7 +22,7 @@ public class QueryFunc{
 	   	 System.out.println("Connecting...");
 		 OracleDataSource ds=new oracle.jdbc.pool.OracleDataSource();// declaring the oracleDataSource object
 		 ds.setURL("jdbc:oracle:thin:@castor.cc.binghamton.edu:1521:acad111");// Setting URL to which JDBC connection to be done
-	     conn = ds.getConnection("phirema1","Piyu0809");// setting up the username and password for the connection
+	     conn = ds.getConnection("username","password");// setting up the username and password for the connection
 	     System.out.println("Connected");
 		 cs = conn.prepareCall("begin ? := refcursor_jdbc.getemployees(); end;");// Prepare calling of the Function
 		 cs.registerOutParameter (1, OracleTypes.CURSOR); 
@@ -69,7 +69,7 @@ public class QueryFunc{
 		   	 System.out.println("Connecting...");
 			 OracleDataSource ds=new oracle.jdbc.pool.OracleDataSource();
 			 ds.setURL("jdbc:oracle:thin:@castor.cc.binghamton.edu:1521:acad111");
-		     conn = ds.getConnection("phirema1","Piyu0809");
+		     conn = ds.getConnection("username","password");
 		     System.out.println("Connected");
 		     cs = conn.prepareCall("begin ? := refcursor_jdbc4.getsupplies(); end;");
 			 cs.registerOutParameter (1, OracleTypes.CURSOR); 
@@ -116,7 +116,7 @@ public class QueryFunc{
 		   	 System.out.println("Connecting...");
 			 OracleDataSource ds=new oracle.jdbc.pool.OracleDataSource();
 			 ds.setURL("jdbc:oracle:thin:@castor.cc.binghamton.edu:1521:acad111");
-		     conn = ds.getConnection("phirema1","Piyu0809");
+		     conn = ds.getConnection("username","password");
 		     System.out.println("Connected");
 		    //Statement stmt = conn.createStatement ();
 			 cs = conn.prepareCall("begin ? := refcursor_jdbc5.getsuppliers(); end;");
@@ -164,7 +164,7 @@ public class QueryFunc{
 			   	 System.out.println("Connecting...");
 				 OracleDataSource ds=new oracle.jdbc.pool.OracleDataSource();
 				 ds.setURL("jdbc:oracle:thin:@castor.cc.binghamton.edu:1521:acad111");
-			     conn = ds.getConnection("phirema1","Piyu0809");
+			     conn = ds.getConnection("username","password");
 			     System.out.println("Connected");
 				 cs = conn.prepareCall("begin ? := refcursor_jdbc3.getpurchases(); end;");
 				 cs.registerOutParameter (1, OracleTypes.CURSOR); 
@@ -213,7 +213,7 @@ public class QueryFunc{
 			   	 System.out.println("Connecting...");
 				 OracleDataSource ds=new oracle.jdbc.pool.OracleDataSource();
 				 ds.setURL("jdbc:oracle:thin:@castor.cc.binghamton.edu:1521:acad111");
-			     conn = ds.getConnection("phirema1","Piyu0809");
+			     conn = ds.getConnection("username","password");
 			     System.out.println("Connected");
 				 cs = conn.prepareCall("begin ? := refcursor_jdbc1.getcustomers(); end;");
 				 cs.registerOutParameter (1, OracleTypes.CURSOR); 
@@ -259,7 +259,7 @@ public class QueryFunc{
 			   	 System.out.println("Connecting...");
 				 OracleDataSource ds=new oracle.jdbc.pool.OracleDataSource();
 				 ds.setURL("jdbc:oracle:thin:@castor.cc.binghamton.edu:1521:acad111");
-			     conn = ds.getConnection("phirema1","Piyu0809");
+			     conn = ds.getConnection("username","password");
 			     System.out.println("Connected");
 				 cs = conn.prepareCall("begin ? := refcursor_jdbc2.getproducts(); end;");
 				 cs.registerOutParameter (1, OracleTypes.CURSOR); 
@@ -308,7 +308,7 @@ public class QueryFunc{
 			   	 System.out.println("Connecting...");
 				 OracleDataSource ds=new oracle.jdbc.pool.OracleDataSource();
 				 ds.setURL("jdbc:oracle:thin:@castor.cc.binghamton.edu:1521:acad111");
-			     conn = ds.getConnection("phirema1","Piyu0809");
+			     conn = ds.getConnection("username","password");
 			     System.out.println("Connected");
 				 cs = conn.prepareCall("begin ? := refcursor_jdbc7.getlogs(); end;");
 				 cs.registerOutParameter (1, OracleTypes.CURSOR); 
@@ -354,7 +354,7 @@ public class QueryFunc{
 						   	 System.out.println("Connecting...");
 							 OracleDataSource ds=new oracle.jdbc.pool.OracleDataSource();
 							 ds.setURL("jdbc:oracle:thin:@castor.cc.binghamton.edu:1521:acad111");
-						     conn = ds.getConnection("phirema1","Piyu0809");
+						     conn = ds.getConnection("username","password");
 						     System.out.println("Connected");
 							 cs = conn.prepareCall("begin ? := refcursor_jdbc6.getdiscounts(); end;");
 							 cs.registerOutParameter (1, OracleTypes.CURSOR); 
@@ -450,7 +450,7 @@ public class QueryFunc{
 				   	 System.out.println("Connecting...");
 					 OracleDataSource ds=new oracle.jdbc.pool.OracleDataSource();
 					 ds.setURL("jdbc:oracle:thin:@castor.cc.binghamton.edu:1521:acad111");
-				     conn = ds.getConnection("phirema1","Piyu0809");
+				     conn = ds.getConnection("username","password");
 				     System.out.println("Connected");
 				     cs = conn.prepareCall("begin ? := refcursor_jdbcSav.purchase_saving(?); end;");
 				     System.out.println("Enter Purchase number");
@@ -496,7 +496,7 @@ public class QueryFunc{
 				   	 System.out.println("Connecting...");
 					 OracleDataSource ds=new oracle.jdbc.pool.OracleDataSource();
 					 ds.setURL("jdbc:oracle:thin:@castor.cc.binghamton.edu:1521:acad111");
-				     conn = ds.getConnection("phirema1","Piyu0809");
+				     conn = ds.getConnection("username","password");
 				     System.out.println("Connected");
 				     cs = conn.prepareCall("begin add_customers(?,?,?); end;");
 				     System.out.println("Enter Customer ID number");
@@ -542,7 +542,7 @@ public class QueryFunc{
 				   	 System.out.println("Connecting...");
 					 OracleDataSource ds=new oracle.jdbc.pool.OracleDataSource();
 					 ds.setURL("jdbc:oracle:thin:@castor.cc.binghamton.edu:1521:acad111");
-				     conn = ds.getConnection("phirema1","Piyu0809");
+				     conn = ds.getConnection("username","password");
 				     System.out.println("Connected");
 				     cs = conn.prepareCall("begin delete_purchase(?); end;");
 				     System.out.println("Enter Purchase Id number for returning purchase:");
@@ -585,7 +585,7 @@ public class QueryFunc{
 				   	 System.out.println("Connecting...");
 					 OracleDataSource ds=new oracle.jdbc.pool.OracleDataSource();
 					 ds.setURL("jdbc:oracle:thin:@castor.cc.binghamton.edu:1521:acad111");
-				     conn = ds.getConnection("phirema1","Piyu0809");
+				     conn = ds.getConnection("username","password");
 				     System.out.println("Connected");
 				     cs = conn.prepareCall("begin add_purchases(?,?,?,?); end;");
 				     System.out.println("Enter Employee Id number for purchase:");
@@ -632,7 +632,7 @@ public class QueryFunc{
 				   	 System.out.println("Connecting...");
 					 OracleDataSource ds=new oracle.jdbc.pool.OracleDataSource();
 					 ds.setURL("jdbc:oracle:thin:@castor.cc.binghamton.edu:1521:acad111");
-				     conn = ds.getConnection("phirema1","Piyu0809");
+				     conn = ds.getConnection("username","password");
 				     System.out.println("Connected");
 				     cs = conn.prepareCall("begin monthly_sale_activities(?,?); end;");
 				     System.out.println("Enter Employee id");
